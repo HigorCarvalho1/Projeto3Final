@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --color1:#065E7c;
+    --color2:#fff;
+    --color3:#202024;
+}
+
+header, input, h2, h3, section, p, footer{
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+
+    
+}
+
+.pagina{
+    width: 43.0rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2.8rem;
+
+    background-color: var(--color1);
+}
+
+header .logo{
+    width: 3.5rem;
+    height: 3.0rem;
+
+    margin-right: 2.5rem;
+
+}
+
+form input{
+    margin-right: 2.6rem;
+    padding: 1.2rem 1.4rem 1.2rem 1.6rem;
+    align-items: center;
+    
+    border-radius: .8rem;
+    background-color: rgba(255, 255, 255, 0.726);
+
+    color: var(--color2);
+    font-size: 16px;
+    font-weight: 600;
+
+    border: 1px solid #dbd8d8;  
+    
+    opacity: 0.6;
+}
+header input::placeholder {
+    opacity: 1;
+    color: var(--color2);
+}
+
+ .capa img{
+    width: 43.0rem;
+    height: 21.9rem;
+    
+    border-radius: .5rem;
+    margin-bottom: 3.1rem;
+
+}
+.capa img:hover{
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+
+}
+h2, section, p,  .icones {
+    padding: 0 2.5rem 0;
+}
+
+h2{
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    margin-bottom: .8rem;
+}
+
+.icones{
+    display: flex;
+    gap: 1.2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 4.3rem;
+
+    
+}
+
+.positivo:hover{
+    transform: scale(1.7) ;
+    cursor: pointer;
+}
+.negativo:hover{
+    transform: scale(1.7) ;
+    cursor: pointer;
+}
+
+p{
+    color: #121214;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.segunda h2{
+    margin-bottom: 3.2rem;
+}
+
+section{
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+    align-items: center;
+}
+
+section h3{
+    color: var(--color3);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+}
+
+section p{
+    color: var(--color3);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+
+    padding: 0;
+}
+
+section img{
+    width: 15.1rem;
+    height: 8.4rem; 
+
+    transition: all 200ms ease-out;
+}
+
+section img:hover{
+    filter: hue-rotate(15deg) contrast(101%) saturate(300%);
+    transition: all 200ms ease-out;
+    transform: scale(1.3) ;
+}
+
+footer{
+    text-align: center;
+    padding: 1.0rem;
+
+    color: var(--color2);
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    background-color: #387E96;
+}
+
+
+@keyframes move{
+    from{
+        transform: translateY(var(--startY))
+    }
+}
+
+header{
+    --startY:100%;
+    animation: move 1.5s;
+}
+
+footer{
+    --startY:-100%;
+    animation: move 1.5s;
+}
+
+@keyframes moves {
+    from{
+        transform: translateX(var(--startX));
+    }
+
+}
+
+.primeira{
+    --startX:-100%;
+    animation: moves 1s;
+}
+
+.segunda{
+    --startX:100%;
+    animation: moves 1s;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+.segunda img{
+    animation: appear .4s var(--delay) backwards;
+}
+@media (min-width: 700px) {
+
+    .pagina{
+        width: 100vw;
+        height: max-content;
+        background-color: #F4FCFF;
+       
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 1.2rem 11.5rem;
+        margin-bottom: 4.4rem;
+
+    }
+
+    header .logo{
+        width: 4.0rem;
+        height: 4.0rem;
+        margin-right: 3.9rem;
+    }
+
+    header input{
+        width: 95rem;
+        margin-right: 3.9rem;
+    }
+
+    header .foto{
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+
+    main{
+        padding: 1.0rem 20.0rem ;
+
+        display: flex;
+        justify-content: center;
+        gap: 3.4rem;
+
+        
+    }
+     .capa img{
+        margin-left: 1.0rem;
+        width: 79.0rem;
+        height: 40.5rem;
+        margin-bottom: 3.2rem;
+        object-fit: cover;
+
+    }
+    main .titulo{
+        display: flex;
+        width: 75.0rem;
+    }
+    .titulo h2 {
+        margin-right: 30.5rem;
+    }
+
+    main p{
+        width: 80.0rem;
+    }
+
+    section{
+        display: flex;
+
+    }
+
+
+    section p {
+        width: 23.0rem;
+        color: var(--color3);
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+
+        padding: 0;
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
